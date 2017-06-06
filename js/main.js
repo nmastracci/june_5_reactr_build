@@ -2,7 +2,7 @@
 (function (){
 	"use strict";
 	// console.log("works!");
-
+//HEX SVG SCROLLING
 var hex1 = document.querySelector("#outside_hexes");
 var hex1OP = document.querySelector("#outside_hexesOP");
 var hex2 = document.querySelector("#outside_hexes2");
@@ -50,10 +50,25 @@ hex3.getBoundingClientRect();
 hex3OP.getBoundingClientRect();
 hex4.getBoundingClientRect();
 
+var section1 = document.querySelector(".forScrolling");
+console.log(section1.offsetHeight);
 window.addEventListener("scroll", function(e){
-	var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / 
-  (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+	// var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / 
+ // 	(document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+ // var scrollPercentage = .25;
+  console.log("Scroll Top: document element" + document.documentElement.scrollTop);
+  console.log("Scroll Top: body" + document.body.scrollTop);
+  console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
+  console.log("client height: doc ele" + document.documentElement.clientHeight);
+
  
+  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
+  (document.documentElement.scrollTop + section1.offsetHeight);
+  
+  console.log("section"+section1.offsetTop)
+
+ console.log("scrollPercentage"+" "+scrollPercentage);
   var drawLength1 = length1 * scrollPercentage;
   var drawLength1OP = length1OP * scrollPercentage;
   var drawLength2 = length2 * scrollPercentage;
@@ -69,6 +84,7 @@ window.addEventListener("scroll", function(e){
   hex3OP.style.strokeDashoffset = length3OP - drawLength3OP;
   hex4.style.strokeDashoffset = length4 - drawLength4;
 
+// TweenLite.to(drawLength1, 0.2,{ease:Elastic.easeOut});
 
   if (scrollPercentage >= 0.99) {
     hex1.style.strokeDasharray = "none"; 
@@ -87,6 +103,7 @@ window.addEventListener("scroll", function(e){
     hex3OP.style.strokeDasharray = length3OP + ' ' + length3OP;
     hex4.style.strokeDasharray = length4 + ' ' + length4;
   }
+ //HEX SVG SCROLLING
 });
 
 
