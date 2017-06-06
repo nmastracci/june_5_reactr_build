@@ -4,17 +4,38 @@
 	display:none;
 }
 
-div, body, section{
+div, body, section, header, footer{
 	margin:0;
 	padding:0;
 	color:#485c5a;
+	font-family:"Quicksand", sans-serif;
 }
 body {
-	font-family: helvetica, arial, sans-serif;
+	font-family:"Quicksand", sans-serif;
 	font-size: 14px;
 	
 }
 
 #container {
-
+	background-color: #fff;
+}
+#mainPic {
+	height:800px;
+	width: 960px;
+	background-color: rgba(72, 92, 90, 0.8);
+}
+.badge {
+	width:200px;
+	display: block;
+	margin-bottom: 100px;
+}
+#hexPath {
+	width:200px;
+	display: block;
+	margin-bottom: 50px;
+}
+#resizeRedraw {
+	width:200px;
+	display: block;
+	margin-bottom: 50px;
 }
