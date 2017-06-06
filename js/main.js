@@ -69,7 +69,7 @@ window.addEventListener("scroll", function(e){
   hex3OP.style.strokeDashoffset = length3OP - drawLength3OP;
   hex4.style.strokeDashoffset = length4 - drawLength4;
 
-var tl = new TimelineLite();
+
   if (scrollPercentage >= 0.99) {
     hex1.style.strokeDasharray = "none"; 
     hex1OP.style.strokeDasharray = "none";

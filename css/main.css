@@ -34,8 +34,13 @@ body {
 	display: block;
 	margin-bottom: 50px;
 }
-#resizeRedraw {
+.resizeRedraw {
 	width:200px;
 	display: block;
 	margin-bottom: 50px;
+}
+.spacer {
+	height:1000px;
+	width: 960px;
+	background-color: rgba(72, 92, 90, 0.8);
 }
